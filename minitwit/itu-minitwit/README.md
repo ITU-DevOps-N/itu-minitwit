@@ -6,6 +6,7 @@ We are using a Python method of using a virtual environment. The virtual environ
 https://github.com/itu-devops/lecture_notes/blob/master/sessions/session_01/Session%201.ipynb
 
 ### Assignment
+https://github.com/itu-devops/lecture_notes/blob/master/sessions/session_01/README_TASKS.md
 
 1. Create a new virtual environment in the root directory of the project (that is, where the .py files and the requirements.txt file) by typing the following command: `python3 -m venv .env` NOTE: If you are asked to install a venv package, install that package. Remember to be sudo, i.e. `sudo apt install pythonx.x-venv`.
 2. Activate that environment. This is done by runnning `source .env/bin/activate` in the same folder you created the environment in, i.e. the root folder.

@@ -16,8 +16,15 @@ NOTE:
 You might need to recompile the .C file. It can be compiled by running `gcc flag_tool.c -o flag_tool -lsqlite3`
 
 ## TL;DR;
+### Virtual Environment
 ```shell
 python3 -m venv .env
 source .env/bin/activate
 pip3 install -r requirements.txt
+```
+
+### Docker
+```shell
+docker build . -t "minitwit"
+docker run -d -p 3000:5000 --name minitwit  minitwit
 ```

@@ -39,7 +39,7 @@ def connect_db():
 def init_db():
     """Creates the database tables."""
     with closing(connect_db()) as db:
-        with app.open_resource('schema.sql') as f:
+        with app.open_resource('schema.sql', 'r') as f:
             db.cursor().executescript(f.read())
         db.commit()
 
@@ -193,7 +193,7 @@ def login():
             username = ?''', [request.form['username']], one=True)
         if user is None:
             error = 'Invalid username'
-        elif not check_password_hash(user['pw_hash'],
+        elif not security.check_password_hash(user['pw_hash'],
                                      request.form['password']):
             error = 'Invalid password'
         else:
@@ -225,7 +225,7 @@ def register():
             g.db.execute('''insert into user (
                 username, email, pw_hash) values (?, ?, ?)''',
                 [request.form['username'], request.form['email'],
-                 generate_password_hash(request.form['password'])])
+                 security.generate_password_hash(request.form['password'])])
             g.db.commit()
             flash('You were successfully registered and can login now')
             return redirect(url_for('login'))

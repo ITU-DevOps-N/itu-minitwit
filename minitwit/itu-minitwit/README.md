@@ -6,6 +6,8 @@ We are using a Python method of using a virtual environment. The virtual environ
 2. Activate that environment. This is done by runnning `source .env/bin/activate` in the same folder you created the environment in, i.e. the root folder.
 3. Rebuild the required packages for runnning the application as listed in `requirements.txt` by running `pip3 install -r requirements.txt`
 
+NOTE:
+You might need to recompile the .C file. It can be compiled by running `gcc flag_tool.c -o flag_tool -lsqlite3`
 
 ## TL;DR;
 ```shell

@@ -2,6 +2,4 @@
 
 APAL, HBEL, TOAP, ERAV, GIMU
 
-## Minitwit
-
-1. project.
+Link to official lecture notes: https://github.com/itu-devops/lecture_notes

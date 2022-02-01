@@ -13,7 +13,9 @@ https://github.com/itu-devops/lecture_notes/blob/master/sessions/session_01/READ
 3. Rebuild the required packages for runnning the application as listed in `requirements.txt` by running `pip3 install -r requirements.txt`
 
 NOTE:
-You might need to recompile the .C file. It can be compiled by running `gcc flag_tool.c -o flag_tool -lsqlite3`
+1. You might need to recompile the .C file. It can be compiled by running `gcc flag_tool.c -o flag_tool -lsqlite3`
+2. Also, you might miss some dependencies from. Look into the assignment link for this.
+
 
 ## TL;DR;
 ### Virtual Environment
